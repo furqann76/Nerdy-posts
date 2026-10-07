@@ -11,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # Config
 PDF_PATHS = ["siddique_family.pdf" , "django.pdf"]
-GROQ_API_KEY="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"
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GROQ_MODEL = "llama3-8b-8192"
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 100

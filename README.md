@@ -174,3 +174,16 @@ See [`requirement.txt`](requirement.txt) for all dependencies.
 This project is for educational/demo purposes.
 
 ---
+
+---
+
+## Configuration
+
+The RAG service (`blog/rag.py`) reads its Groq key from the `GROQ_API_KEY` environment variable. See `.env.example`, and export the variable before starting the service:
+
+```bash
+export GROQ_API_KEY=your-groq-api-key
+uvicorn blog.rag:app --reload
+```
+
+Never commit real keys. `db.sqlite3` and `.env` are local-only files and are gitignored.
